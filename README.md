@@ -1,2 +1,2 @@
-# fMRI-EEG-Project
-this repository contains project files for NBML -EEG-project competition
+# Dail fun with Python
+this repository contains project files for Having FUN with Python
