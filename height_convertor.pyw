@@ -1,16 +1,18 @@
 # this code will produce an app that convert the height...
+
+
 from tkinter import Tk, Button, Label, DoubleVar, Entry
 
-# Define Function
+# Define Function for 2 Buttons
 
 def convert():
     value = float(ft_entry.get())
     meter = value * 0.3048
-    ft_value2.set("%.4f" % meter)
+    mt_value.set("%.4f" % meter)
 
 
 def clear():
-    ft_value2.set("")
+    mt_value.set("")
     ft_value.set("")
 
 
@@ -21,23 +23,25 @@ window = Tk()
 window.title("transform height in meter to feet")
 window.configure(background="light blue")
 window.geometry("320x220")
-window.resizable(width=False, height=False)
+window.resizable(width=False, height=False)     # make size of the window
 
-ft_lbl1 = Label(window, text="Feet", bg="purple", fg="white", width=14)
-ft_lbl1.grid(column=0, row=0, padx=15, pady=15)
+ft_lbl = Label(window, text="Feet", bg="purple", fg="white", width=14)
+ft_lbl.grid(column=0, row=0, padx=15, pady=15)
 
+# Define Feet
 ft_value = DoubleVar()
 ft_entry = Entry(window, textvariable=ft_value, width=14)
 ft_entry.grid(column=1, row=0)
 ft_entry.delete(0, 'end')
 
-ft_lbl2 = Label(window, text="Meter", bg="Green", fg="white", width=14)
-ft_lbl2.grid(column=0, row=1, padx=15, pady=30)
+mt_lbl = Label(window, text="Meter", bg="Green", fg="white", width=14)
+mt_lbl.grid(column=0, row=1, padx=15, pady=30)
 
-ft_value2 = DoubleVar()
-ft_entry2 = Entry(window, textvariable=ft_value2, width=14)
-ft_entry2.grid(column=1, row=1)
-ft_entry2.delete(0, 'end')
+# Define Meter
+mt_value = DoubleVar()
+mt_entry = Entry(window, textvariable=mt_value, width=14)
+mt_entry.grid(column=1, row=1)
+mt_entry.delete(0, 'end')
 
 convert_btn = Button(window, text="Convert", bg='blue', fg='white', width=14, command=convert)
 convert_btn.grid(column=0, row=3, padx=15)
@@ -45,4 +49,6 @@ convert_btn.grid(column=0, row=3, padx=15)
 clear_btn = Button(window, text="Clear", bg='Red', fg='white', width=14, command=clear)
 clear_btn.grid(column=1, row=3, padx=15)
 
-window.mainloop()
+window.mainloop()     # use Loop to keep in Loop the program
+
+# End of programm

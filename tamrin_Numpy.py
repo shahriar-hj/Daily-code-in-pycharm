@@ -28,9 +28,12 @@ print(a[1, -2])
 print(a[0, 5])
 print(a[0, :])
 print(a[:, 3])
-print(a[0, 6:1:-2])     # 1- starting index:ending index:step size
+print(a[0, 6:1:-2])  # 1- starting index:ending index:step size
 a[0, 5] = 23
 print(a)
 
 # 3D Example
-print(np.array([]))
+b = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+print(b)
+print(b[0, 1, 1])
+

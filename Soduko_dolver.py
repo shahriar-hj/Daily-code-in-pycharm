@@ -4,15 +4,15 @@
 import numpy as np
 
 # first we need to define our soduko Puzzle
-soduk = [[0, 0, 8, 0, 0, 0, 0, 0, 0],
-         [0, 0, 0, 8, 0, 0, 5, 2, 7],
-         [0, 0, 0, 6, 0, 3, 0, 0, 0],
-         [0, 1, 0, 0, 0, 0, 0, 0, 0],
-         [0, 0, 0, 0, 0, 7, 0, 5, 0],
-         [0, 6, 0, 3, 0, 0, 0, 7, 4],
-         [7, 3, 0, 0, 1, 0, 0, 4, 0],
-         [1, 0, 0, 0, 5, 2, 0, 9, 0],
-         [5, 0, 2, 0, 0, 0, 0, 0, 0]]
+soduk = [[0, 3, 0, 7, 0, 0, 0, 5, 9],
+         [7, 4, 0, 0, 0, 0, 0, 0, 0],
+         [0, 0, 1, 4, 8, 0, 2, 3, 0],
+         [6, 0, 0, 8, 1, 0, 0, 0, 0],
+         [0, 0, 0, 0, 0, 0, 5, 2, 6],
+         [0, 0, 2, 0, 0, 0, 0, 0, 0],
+         [3, 0, 0, 1, 0, 5, 0, 0, 0],
+         [1, 8, 0, 0, 4, 0, 0, 9, 2],
+         [0, 0, 0, 0, 0, 0, 0, 4, 0]]
 
 print(np.array(soduk))
 
@@ -39,7 +39,7 @@ print(possible(4, 4, 3))
 print(possible(4, 4, 5))
 
 
-# This Function will solve the Puzzle
+# This Function will solve the Puzzle with help of possible Function
 def solve():
     global soduk
     for y in range(9):
@@ -52,7 +52,5 @@ def solve():
                         soduk[y][x] = 0
                 return
     print(np.array(soduk))
-    input('More?')
-
 
 solve()
